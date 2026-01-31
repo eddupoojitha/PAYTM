@@ -1,0 +1,1200 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Inter, sans-serif;
+}
+
+body {
+    background: #f7f9fc;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+nav {
+    height: 72px;
+    background: white;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    gap: 24px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.05);
+    position: fixed;
+    top: 0;              
+    left: 0;
+    width: 100%;  
+    z-index: 9999;       
+}
+
+ol {
+    list-style: none;
+}
+.menu {
+    font-size: 1.6rem;
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    left: 20px; 
+    top: 50%;
+    transform: translateY(-50%);
+    
+}
+
+.menu.close {
+    display: none;
+}
+
+.nav-logo {
+    width: 120px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 28px;
+}
+.nav-links > li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-size: 0.85rem;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.nav-links li ol {
+    display: none;
+    position: absolute;
+    top: 345%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    min-width: 180px;
+    border-radius: 8px;
+    box-shadow: 0 6px 20px rgba(0,0,0,.15);
+}
+
+.nav-links li ol::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid white;
+}
+
+.nav-links li:hover ol {
+    display: block;
+}
+
+.nav-links li ol li {
+    padding: 12px 16px;
+}
+
+.nav-links2 {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    font-size: 0.85rem;
+}
+
+.signin-btn {
+    background: #002970;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 3px 16px 3px 4px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+}
+
+.signin-btn img {
+    width: 28px;
+}
+
+.nav-profile {
+    width: 36px;
+    border-radius: 50%;
+    display: none;
+}
+
+.mobile-menu {
+    position: fixed;
+    top: 72px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 72px);
+    background: white;
+    padding: 2rem;
+    transform: translateX(-100%);
+    transition: 0.35s;
+    box-shadow: 4px 0 15px rgba(0,0,0,.2);
+}
+
+.mobile-menu p {
+    padding: 1rem 0;
+}
+
+#nav-toggle {
+    display: none;
+}
+
+#nav-toggle:checked ~ .mobile-menu {
+    transform: translateX(0);
+}
+
+#nav-toggle:checked ~ .menu.open {
+    display: none;
+}
+
+#nav-toggle:checked ~ .menu.close {
+    display: block;
+}
+
+/* ---------------------------------------- */
+.metro-item,
+.tollgate-item {
+    display: none !important;
+}
+
+.recharge-section {
+    margin: 100px 30px 0px 30px;
+    display: flex;
+    gap: 30px; 
+    padding: 40px 0;
+}
+
+.recharge-card {
+    background: #ffffff;
+    margin: 0;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.recharge-card h3 {
+    padding-bottom: 20px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.recharge-list ol {
+    list-style: none;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+}
+
+.recharge-list li {
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.recharge-list img {
+    height: 60px;
+    width: 60px;
+    transition: all 0.3s ease;
+}
+.recharge-list li p {
+    font-size: 13px;
+    margin-top: 10px;
+    line-height: 1.3;
+    font-weight: bold;
+}
+.recharge-banner img {
+    max-width: 350px;
+}
+
+.recharge-list li:hover {
+    cursor: pointer;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+    transform: translateY(-4px);
+}
+
+.recharge-banner:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+} 
+
+/* ----------------------------------- */
+.promo-row{
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    margin: 0  0 0 50px;
+    align-items: center;
+}
+
+.promo-img{
+    max-width: 550px;
+}
+
+.promo-img:hover{
+    transform: scale(1.01);
+    cursor: pointer; 
+}
+
+.promo-grid{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin: 30px 60px 30px 60px;
+}
+
+.promo-grid img{
+    height: 150px;
+    width: 400px; 
+}  
+/* ----------------------------------------------- */
+.travel-section{
+    background: white;
+    border-radius: 20px;
+    margin: 40px 50px;
+    padding: 20px;
+}
+
+.travel-logo img{
+    width: 180px !important;
+    position: absolute;
+    left: 80%;
+    transform: translateY(180%); 
+}
+
+.travel-tabs img{
+    width: 40px;
+}
+
+.travel-tabs{
+    display: flex;
+    gap: 60px; 
+    cursor: pointer;  
+}
+
+.travel-tabs p{
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.flight-text{
+    padding-bottom: 10px;
+    border-bottom: 2px solid #00BAF2;
+}
+
+.flight-search{
+    border: 2px solid #D3D3D3;
+    border-radius: 20px;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.trip-type{
+    display: flex;
+    gap: 30px;
+    cursor: pointer;
+}
+
+.trip-type span{
+    font-size: 15px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.flight-form{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    border-bottom: 2px solid #D3D3D3;
+    padding-bottom: 20px;
+    cursor: pointer;
+}
+
+.inline-group{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.inline-group img{
+    width: 20px;
+    height: 20px;
+}
+
+.search-group{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.flight-form p{
+    color: gray;
+    font-size: 14px;
+    padding-bottom: 10px;
+}
+
+.search-group button{
+    color: white;
+    background: #00BAF2;
+    padding: 15px 18px;
+    border-radius: 10px;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.divider-left{
+    border-left: 2px solid #D3D3D3;
+    padding-left: 10px;
+}
+
+/* ------------------------ */
+.fare-title{
+    display: flex;
+    gap: 10px;
+}
+
+.fare-title img{
+    height: 18px;
+    width: 18px;
+}
+
+.fare-offers{
+    display: flex;
+    gap: 30px;
+}
+
+.fare-header p{
+    font-size: 15px;
+}
+
+.fare-header h4{
+    font-size: 15px;
+    color: green;
+}
+
+.fare-card{
+    border: 1px solid #D3D3D3;
+    border-radius: 15px;
+    padding: 12px;
+    position: relative;
+    cursor: pointer;
+}
+
+.fare-card p{
+    font-size: 12px;
+    padding-top: 5px;
+}
+
+.fare-card span{
+    font-size: 12px;
+    display: none;
+    position: absolute;
+    background: white;
+    width: 300px;
+    border-radius: 10px;
+    top: 110%;
+    left:160%;
+    transform: translateX(-50%);
+    padding: 10px;
+    border: 1px solid #D3D3D3;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    z-index: 10;
+}
+
+.fare-card span::before{
+    content:"";
+    position: absolute;
+    top: -10px;
+    left: 8%; 
+    transform: translateX(-50%);
+    border-left: 12px solid transparent ;
+    border-right: 12px solid transparent ;
+    border-bottom: 10px solid gray ;
+}
+
+.fare-card span::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 8%;
+    transform: translateX(-50%); 
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 10px solid white; /* inner fill */
+}
+
+.fare-card:hover span{
+    cursor: pointer;
+    display: block;
+} 
+
+.fare-header p{
+    color: gray;
+    padding: 0  0 8px 5px;
+}
+
+/* ----------------------------------- */
+.upi-section{
+    display: flex;
+    background: white;
+    margin: 30px 50px;
+    border-radius: 20px;
+    padding: 30px 30px 30px 80px;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.upi-logo{
+    width: 180px;
+    padding-top:90px;
+    padding-bottom: 20px;
+}
+
+.store-badge{
+    width: 100px;
+}
+
+.store-badges{
+    display: flex;
+    gap: 10px;
+}
+
+.upi-img img{
+    width: 1000px;
+}
+
+.upi-content h1{
+    font-size: 45px;
+    padding: 0 20px 20px 0;
+}
+
+.upi-content span{
+    color: #00BAF2;
+}
+
+.upi-content p{
+    font-size: 20px;
+    padding: 0 60px 20px 0;
+    line-height: 1.5;
+}
+
+/* ------------------------------------ */
+.support-banner{
+    margin: 0 50px;
+    background: #0092FB;
+    color: white;
+    padding: 10px 20px ;
+    border-radius: 30px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    cursor: pointer;
+    max-width: 100%;
+}
+
+.support-banner img{
+    width: 40px;
+}
+
+.support-banner >button{
+    margin-left: 30%;
+    padding: 10px 18px;
+    color: white;
+    background: transparent;
+    border: 1px solid white;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.support-banner h4{
+    font-size: 1rem;
+}
+
+/* -------------------------------- */
+.finance-section{
+    margin: 30px 50px;
+    display: flex;
+    gap: 30px;
+}
+
+.credit-logo, .insurance-logo{
+    width: 150px;
+}
+
+.finance-section h1 {
+    font-size: 38px;
+}
+
+.finance-section p {
+    font-size: 18px;
+    padding: 20px 10% 20px 0;
+    line-height: 1.4;
+}
+
+.finance-section span {
+    color: #00BAF2;
+}
+
+.cta-row img{
+    width: 200px;
+}
+
+.cta-row{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.credit-img{
+    width: 600px;
+    padding-top: 20px;
+}
+
+.insurance-img{
+    width: 550px;
+}
+
+.credit-box, .insurance-box{
+    padding: 50px 30px;
+    border-radius: 30px;
+    flex: 1;
+}
+
+.credit-box{
+    background: linear-gradient(
+        160deg,
+        #E3F1FE 0%,
+        #E3F1FE 68%,
+        #00BAF2 68%,
+        #00BAF2 72%,
+        #ffffff 72%
+    );
+}
+
+.credit-box img {
+    max-width: 100%;
+}
+
+.insurance-box{
+    background:#E4F9FF;
+}
+
+.finance-section button {
+    padding: 10px 18px;
+    background: transparent;
+    color: #002970;
+    cursor: pointer;
+    border-radius: 20px;
+    border: 1px solid #002970;
+    font-weight: bold;
+}
+
+.finance-section button:hover {
+    background: #002970;
+    color: white;
+    transition: 0.4s all ease;
+}
+
+.insurance-box button{
+    margin-bottom: 50px;
+}
+/* --------------------------------- */
+.investment-section{
+    margin: 0 50px;
+    background: white;
+    padding: 0 20px 20px 70px;
+    display: flex;
+    border-radius: 20px;
+}
+
+.investment-content img{
+    width: 180px;
+    margin:80px 0 15px 0;
+    
+}
+
+.investment-content h1{
+    font-size: 36px;
+    color:#00BAF2;
+
+}
+
+.investment-content h2{
+    font-size: 30px;
+
+}
+
+.highlight-text{
+    padding: 15px 0 15px 0;
+    line-height: 1.4;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.investment-content button{
+    padding: 10px 18px;
+    background:#002970 ;
+    color: white;
+    cursor: pointer;
+    border-radius: 20px;
+    font-weight: bold;
+    border: none;
+    margin-bottom: 12px;
+}
+
+.investment-content button:hover{
+    background: transparent;
+    border: 1px solid #002970;
+    color: #002970;
+    transition: 0.4s all ease;
+}
+
+.investment-img img{
+    max-width: 550px;
+
+}
+
+.disclaimer-text{
+    font-size: 12px;
+    text-align: justify;
+    padding-top: 20px;
+    color: gray;
+}
+
+.disclaimer-text a{
+    text-decoration: none;
+    color: #00BAF2;
+}
+
+/* -------------------------------- */
+.business-section{
+    background: white;
+    border-radius: 20px;
+    margin: 30px 50px;
+    padding: 20px 0 20px 100px;
+    display: flex;
+}
+
+.business-content img{
+    width: 100px;
+    padding: 60px 0 10px 0;
+}
+
+.business-img img{
+    max-width: 550px;
+}
+
+.business-content h2{
+    font-size: 40px;
+    padding-bottom: 6px;
+}
+
+.business-content h3{
+    font-size: 38px;
+    color: #00BAF2;
+}
+
+.business-content p{
+    font-size: 16px;
+    line-height: 1.4;
+    text-align: left;
+    padding: 20px 30% 20px 0;
+}
+
+.business-content button{
+    padding: 10px 18px;
+    background:#002970 ;
+    color: white;
+    cursor: pointer;
+    border-radius: 20px;
+    font-weight: bold;
+    border: none;
+    margin-bottom: 12px;
+}
+
+.business-content button:hover{
+    background: transparent;
+    border: 1px solid #002970;
+    color: #002970;
+    transition: 0.4s all ease;
+}
+
+/* ---------------------------------------- */
+footer{
+    background: white;
+    padding: 50px 80px 0 80px;
+}
+
+footer ol{
+    list-style-type: none;
+    color: #707279;
+    font-weight: bold;
+}
+
+footer li{
+    padding-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+footer ol i{
+    color: black;
+    padding-right: 5px;
+}
+
+footer h4{
+    padding-bottom: 10px;
+    color: #707279;
+    font-weight: bold;
+}
+
+footer p{
+    border-bottom: 1px solid #707279;
+    margin-left: 10px;
+    opacity: 0.5;
+}
+
+.footer-social{
+    display:flex;
+    justify-content: space-between;
+}
+
+.footer-links{
+    border-bottom: 1px solid #707279;
+    padding-bottom: 30px;
+}
+
+.footer-social{
+    padding: 30px 0;
+}
+
+.footer-social span{
+    color:#707279 ;
+    font-size: 14px;
+}
+
+.footer-social i{
+    border-radius: 50%;
+    background: black;
+    color: white;
+    padding: 6px 0;
+    width: 30px;
+    margin: 0 4px;
+}
+
+.footer-blue{
+    background: #00BAF2;
+    height: 15px;
+}
+
+.footer-violet{
+    background: #002970;
+    height: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width: 767px) {
+    nav {
+        padding: 0 20px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start; 
+        gap: 12px; 
+    }
+
+    .menu {
+        display: block;
+        position: relative; 
+        left: auto;
+        top: auto;
+        transform: none;
+        z-index: 1000;
+    }
+
+    .logo {
+        margin-left: 8px; 
+    }
+
+    .nav-links,
+    .signin-btn,
+    .nav-links2 li:first-child {
+        display: none;
+    }
+
+    .nav-profile {
+        display: block;
+        border: 4px solid #002970;
+    }
+    .recharge-section{
+        flex-direction: column;
+        padding: 10px 0;
+        align-items: center;
+        max-width: 100%;
+    }
+    .recharge-card {
+    width: 100%;
+}
+
+    .recharge-list ol{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4,auto);
+        justify-items: start;
+        align-items: start;
+        gap: 50px;
+        
+    }
+    .metro-item,
+.tollgate-item {
+    display:block !important;   
+}
+.recharge-list li p {
+    font-size: 11px;
+}
+.promo-row{
+    margin: 10px 0 0;
+    flex-direction: column;
+    gap: 15px;
+}
+.promo-img{
+    max-width: 90%;
+}
+.promo-grid{
+    flex-direction: column;
+    align-items: center;
+}
+.upi-section{
+    flex-direction: column ;
+    align-items: center;
+    justify-content: center;
+}
+.upi-img img{
+    max-width: 80%;
+}
+.upi-content h1{
+    font-size: 35px;
+}
+.upi-content p{
+    font-size: 18px;
+}
+.support-banner >button{
+    margin-left: 10px;
+    padding: 6px 8px;
+    font-size: 8px;
+}
+.support-banner h4{
+    font-size: 12px;
+    margin-left: 0;
+    padding-left: 0;
+}
+.support-banner{
+    max-width: 100%;
+    gap: 5px;
+    padding: 5px 3px;
+}
+.support-banner img{
+    width: 30px;
+}
+.finance-section{
+    flex-direction: column;
+    align-items: center;
+}
+.credit-img{
+    max-width: 90%;
+}
+.insurance-img{
+    max-width: 100%;
+}
+.insurance-box{
+    margin: 0;
+    padding: 20px;
+}
+.finance-section h1 {
+    font-size: 32px;
+}
+.investment-content h1,.investment-content h2{
+    font-size: 24px;
+}
+.investment-img img{
+    max-width: 500px;
+}
+.investment-section{
+    flex-direction: column;
+    align-items: center;
+}
+.highlight-text{
+    font-size: 10px;
+}
+.investment-section{
+    flex-direction: column;
+    align-items: center;
+}
+.highlight-text{
+    font-size: 12px;
+}
+.business-section{
+    flex-direction: column;
+    align-items: center;
+}
+footer{
+    font-size: 12px;
+}
+.footer-social{
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+}
+
+@media (min-width: 768px) and (max-width: 1015px) {
+    .nav-links,
+    .nav-links2 li:first-child {
+        display: none;
+    }
+
+    .menu {
+        display: block;
+        position: relative; 
+        left: auto;
+        top: auto;
+        transform: none;
+        z-index: 1000;
+
+    } 
+    nav{
+        padding-right: 0;
+        padding-left: 50px;
+    }
+    /* -------- */
+    .recharge-section{
+        flex-direction: column;
+        padding: 10px 0;
+        align-items: center;
+        max-width: 100%;
+    }
+    .recharge-card {
+    width: 100%;
+}
+
+
+    .recharge-list ol{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4,auto);
+        justify-items: start;
+        align-items: start;
+        gap: 80px;
+        
+    }
+    .metro-item,
+.tollgate-item {
+    display:block !important;   
+}
+.promo-row{
+    margin: 10px 0 0;
+    flex-direction: column;
+    gap: 15px;
+}
+.promo-img{
+    max-width: 85%;
+}
+.upi-section{
+    flex-direction: column ;
+    align-items: center;
+    justify-content: center;
+}
+.upi-img img{
+    max-width: 80%;
+}
+.upi-content h1{
+    font-size: 38px;
+}
+.upi-content p{
+    font-size: 18px;
+}
+.support-banner >button{
+    margin-left: 10px;
+    padding: 8px 12px;
+    font-size: 10px;
+}
+.support-banner h4{
+    font-size: 14px;
+    margin-right: 100px;
+    padding-left: 0;
+}
+.support-banner{
+    max-width: 100%;
+    gap: 5px;
+    padding: 5px 3px;
+}
+.finance-section{
+    flex-direction: column;
+    align-items: center;
+}
+.credit-img{
+    max-width: 90%;
+}
+.insurance-img{
+    max-width: 110%;
+}
+.insurance-box{
+    margin: 0;
+    padding: 20px;
+}
+.investment-content h1,.investment-content h2{
+    font-size: 30px;
+}
+.investment-img img{
+    max-width: 550px;
+}
+.investment-section{
+    flex-direction: column;
+    align-items: center;
+}
+.highlight-text{
+    font-size: 12px;
+}
+.business-section{
+    flex-direction: column;
+    align-items: center;
+}
+
+
+    
+
+    
+}
+
+@media (min-width: 1015px) and (max-width:1279px) {
+    .mobile-menu {
+        display: none;
+    }
+    nav{
+        padding:0 10px;
+    }
+    
+    /* ----------- */
+    .recharge-section{
+        margin: 80px 0 30px 0;
+    }
+    .recharge-banner img {
+    max-width: 100%;
+}
+.recharge-list li {
+    padding: 5px;
+     max-width: 100%;
+}
+.recharge-list ol {
+    padding: 10px;
+}
+.promo-row{
+    margin: 0;
+}
+.promo-img{
+    max-width: 45%;
+}
+.upi-img img{
+    max-width: 400px;
+    margin-top: 50px;
+}
+.upi-content h1{
+    font-size: 38px;
+}
+.support-banner >button{
+    margin-left: 30px;
+}
+.investment-content h1,.investment-content h2{
+    font-size: 28px;
+}
+.investment-section{
+    margin: 0;
+}
+.investment-img img{
+    max-width: 450px;
+     margin-top: 80px;
+    margin-left: 50px; 
+
+}
+.business-content h2{
+    font-size: 36px;
+}
+
+
+}
+@media (min-width: 1280px) {
+    .mobile-menu {
+        display: none;
+    }
+    nav{
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+}
+@media(max-width:560px){
+    .recharge-list ol{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3,auto);
+        justify-items: start;
+        align-items: start;
+        gap: 20px;
+        
+    }
+    .investment-img img{
+    max-width: 100%;
+    margin-top: 80px;
+    margin-left: 50px;
+
+}
+
+}
+@media(max-width:1072px){
+    .business-section,.investment-section,.finance-section,.support-banner,.upi-section,.travel-section,.recharge-section{
+        margin-left: 0;
+        margin-right: 0;
+    }
+    footer p{
+    display: none;
+}
+footer li span{
+    border-bottom: 1px solid gray;
+    width: 100%;
+    padding-bottom: 10px;
+}
+}
